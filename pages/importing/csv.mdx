@@ -1,0 +1,60 @@
+---
+title: Direct CSV Upload
+---
+
+import Image from 'next/image'
+
+# Direct CSV Upload
+
+If you want more control over the exact users to import into your Multibase workspace, use the CSV upload feature.
+
+In this guide, we'll walk through the steps to upload a CSV file containing user data.
+
+## Step 1: Click the "Import CSV" button
+
+From the [addresses](https://app.multibase.co/addresses) page, click the "Import CSV" button.
+
+<Image 
+    className="mt-4 rounded-lg shadow-md"
+    src="/images/import/csv1.png"
+    alt="Import CSV button"
+    unoptimized={true}
+    width={150} 
+    height={100}
+/>
+
+## Step 2: Select chain
+
+Select the chain you want to import users to.
+
+<Image 
+    className="mt-4 rounded-lg shadow-md"
+    src="/images/import/csv2.png"
+    alt="Select chain"
+    unoptimized={true}
+    width={400} 
+    height={300}
+/>
+
+## Step 3: Configure CSV fields
+
+The columns you need to import your CSV are as follows:
+
+- `address`: The address of the user you want to import
+- `label`: The label you want to assign to the user (optional)
+
+Leave the `label` column blank if you don't want to assign a label to the user.
+
+Sample:
+
+| address | label |
+| ------- | ----- |
+| 0x123... | Twitter Campaign #12  |
+| 0x456... | Discord User |
+| 0x789... | Twitter Follower |
+| 0xabc... | Discord User |
+| 0xdef... | Twitter Follower |
+
+## Step 4: Import CSV and wait for synchronization
+
+Click the `confirm` button and wait for the addresses to synchronize.

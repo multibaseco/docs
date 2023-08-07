@@ -1,0 +1,59 @@
+---
+title: JavaScript SDK
+---
+import Image from 'next/image'
+
+# Import users from the JavaScript SDK
+
+Importing users with the Multibase JavaScript SDK is the best way to track user activity on your product and connect it to on-chain activity. This guide will walk you through the steps to get started with the Multibase JavaScript SDK.
+
+In this guide, we'll walk through the process of importing users from your client to Multibase.
+
+## Step 1: Installation
+
+First, you'll need to install the Multibase JavaScript SDK. You can do this with npm or yarn.
+
+```bash
+# npm
+npm install @multibase/js
+
+# yarn
+yarn add @multibase/js
+```
+
+## Step 2: Initialization
+
+Then, you must initialize with your Multibase write API key. You can find your write API key in your [settings](https://app.multibase.co/settings) page.
+
+```javascript
+import { init } from '@multibase/js'
+
+init(YOUR_WRITE_API_KEY)
+```
+
+## Step 3: Import users
+
+To import users, you'll need to call the `identify` function. This will send the address to Multibase and automatically sync the address.
+
+```javascript
+import { identify } from "@multibase/js"
+
+// Basic identifying call
+identify({
+    type: "address",
+    address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+    chain: 1
+})
+
+// Identify with properties
+const userProperties = {
+    plan: "Premium User",
+    email: "vitalik@ethereum.org"
+}
+identify({
+    type: "address",
+    address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
+    chain: 1,
+    properties: userProperties
+})
+```

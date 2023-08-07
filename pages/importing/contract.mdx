@@ -1,0 +1,57 @@
+---
+title: Automatic Contract Sync
+---
+
+import Image from 'next/image'
+
+# Automatic Contract Sync
+
+The easiest way to import users into Multibase is via the [Data Sources](https://app.multibase.co/sources) tab on the Multibase dashboard. This allows you to connect to your existing data sources and automatically sync users into Multibase.
+
+In this guide, we'll walk through how to connect to your contract and sync users into Multibase.
+
+## Step 1: Create a new data source
+
+First, navigate to the [Data Sources](https://app.multibase.co/sources) tab on the Multibase dashboard and click the "Create Data Source" button.
+
+<Image 
+    className="mt-4 rounded-lg shadow-md"
+    src="/images/import/source1.png"
+    alt="Create Data Source"
+    unoptimized={true}
+    width={300} 
+    height={300}
+/>
+
+## Step 2: Configure your data source
+
+### Name your data source
+
+Give your data source a name. This is just for your reference and can be anything you want.
+
+### Specify an address
+
+Specify the address of the contract you want to sync users from.
+
+### Specify a contract ABI (optional)
+
+If you want to ensure correct decoding, you can specify the ABI of the contract you're syncing from. If you don't specify an ABI, Multibase can decode the contract using the public ABI.
+
+### Specify import label (optional)
+
+Specify the label you want to use for the users you're importing. This is the label that will be associated with the users you import.
+
+<Image 
+    className="mt-4 rounded-lg shadow-md"
+    src="/images/import/source2.png"
+    alt="Configure Data Source"
+    unoptimized={true}
+    width={400} 
+    height={400}
+/>
+
+## Step 3: Wait for sync
+
+Once you've configured your data source, Multibase will automatically sync users from your contract. This can take a few minutes depending on the size of your contract.
+
+⚠️ **Note:** Multibase will not sync users past your workspace user limit. If you want to sync more users, you'll need to upgrade your workspace.
