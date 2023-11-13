@@ -35,14 +35,14 @@ init(YOUR_WRITE_API_KEY)
 
 To import users, you'll need to call the `identify` function. This will send the address to Multibase and automatically sync the address.
 
+When you identify user by wallet address, they will automatically be synchronized in your Multibase workspace. Upon import, Multibase will sync all on-chain data on every chain where a user has sent at least one transaction.
+
 ```javascript
 import { identify } from "@multibase/js"
 
 // Basic identifying call
 identify({
-    type: "address",
-    address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-    chain: 1
+    address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
 })
 
 // Identify with properties
@@ -51,9 +51,7 @@ const userProperties = {
     email: "vitalik@ethereum.org"
 }
 identify({
-    type: "address",
     address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-    chain: 1,
     properties: userProperties
 })
 ```

@@ -37,19 +37,18 @@ init(YOUR_WRITE_API_KEY)
 
 To associate product events with users, you have to use the `identify` function.
 
-##### Identify by wallet and chain
+##### Identify by an address
 
-To connect a user by their on-chain address, we must provide an address and chain parameter. For the chain parameter, view our supported chains.
+To connect a user by their on-chain address, we must provide an address parameter.
 
-When you identify user by wallet address and chain, they will automatically be synchronized in your Multibase workspace.
+When you identify user by wallet address, they will automatically be synchronized in your Multibase workspace. Upon import, Multibase will sync all on-chain data on every chain where a user has sent at least one transaction.
 
 ```javascript
 import { identify } from "@multibase/js"
 
 // Basic identifying call
 identify({
-    address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-    chain: 1
+    address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045"
 })
 
 // Identify with properties
@@ -59,7 +58,6 @@ const userProperties = {
 }
 identify({
     address: "0xd8da6bf26964af9d7eed9e03e53415d37aa96045",
-    chain: 1,
     properties: userProperties
 })
 ```
@@ -83,14 +81,3 @@ const eventProperties = {
 }
 track("Link Click", eventProperties)
 ```
-
-## ⛓️ Supported chains
-
-| Chain | Chain ID |
-| ----- | -------- |
-| Ethereum | 1 |
-| Polygon | 137 |
-| Arbitrum | 42161 |
-| Avalanche | 43114 |
-| BSC | 56 |
-| Fantom | 250 |
