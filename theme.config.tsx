@@ -3,7 +3,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 import Image from 'next/image'
 
 const config: DocsThemeConfig = {
-    logo: <Image src="/branding/white/wordmark.png" alt="Multibase" width={150} height={18} />,
+    logo: <Image src="/docs/branding/white/wordmark.png" alt="Multibase" width={150} height={18} />,
     project: {
         link: 'https://github.com/multibaseco/js'
     },
