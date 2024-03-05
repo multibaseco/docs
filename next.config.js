@@ -3,6 +3,8 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
 })
 
+const port = process.env.PORT || 3000
+
 module.exports = withNextra({
-  basePath: '/docs',
+  // basePath: '/docs',
 })
