@@ -1,0 +1,15 @@
+{
+    "redirects": [
+      {
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "host",
+            "value": "docs.multibase.co"
+          }
+        ],
+        "destination": "https://multibase.co/docs/:path*",
+        "permanent": true
+      }
+    ]
+  }
