@@ -9,7 +9,7 @@ module.exports = withNextra({
         return [
             {
                 source: '/:path*',
-                destination: '/docs/:path*',
+                destination: 'https://multibase.co/docs/:path*', // Matched parameters can be used in the destination
                 basePath: false,
                 permanent: true,
                 has: [
